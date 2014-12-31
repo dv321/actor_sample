@@ -32,6 +32,7 @@ actor = Actor(
 	context,
     logger,
 
+	#connect to brain so we can send messages
 	[ { 'name':'brain', 'type':'zmq', 'port':channels['brain'], 'bind_or_connect':'connect',
 	    'socket_type': zmq.PAIR, 'subscribe':False}
 	]
